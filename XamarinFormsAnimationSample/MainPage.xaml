@@ -4,18 +4,27 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout>
-		<Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+		<Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="Teal">
 			<Label.Triggers>
-				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsAnimationStart}" Value="true">
+				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeBackgroundColorAminationStart}" Value="true">
+					<DataTrigger.EnterActions>
+						<trigger:ChangeBackgroundColorTriggerAction StartsFrom="0"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:ChangeBackgroundColorTriggerAction StartsFrom="1"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>  
+				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="true">
 					<DataTrigger.EnterActions>
 						<trigger:LabelFontSizeTriggerAction FontSize="10"/>
 					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
 						<trigger:LabelFontSizeTriggerAction FontSize="40"/>
 					</DataTrigger.ExitActions>
-				</DataTrigger>  
+				</DataTrigger>
 			</Label.Triggers>
 		</Label>
-		<Button Command="{Binding StartAnimationCommand}" Text="Start Animation"/>
+		<Button Command="{Binding StartChangeBackgroundColorAnimationCommand}" Text="Change BackgroundColor"/>
+		<Button Command="{Binding StartChangeFontSizeAnimationCommand}" Text="Change FontSize"/>
 	</StackLayout>
 </ContentPage>

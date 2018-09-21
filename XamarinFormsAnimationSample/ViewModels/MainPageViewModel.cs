@@ -9,27 +9,53 @@ namespace XamarinFormsAnimationSample
 	public class MainPageViewModel : BindableBase
 	{
 		#region BindableProperty
-		private bool _IsAnimationStart;
-		public bool m_IsAnimationStart
+		private bool _IsChangeFontSizeAnimationStart;
+		public bool m_IsChangeFontSizeAnimationStart
 		{
-			get { return _IsAnimationStart; }
-			set { this.SetProperty(ref this._IsAnimationStart, value); }
+			get { return _IsChangeFontSizeAnimationStart; }
+			set { this.SetProperty(ref this._IsChangeFontSizeAnimationStart, value); }
 		}
+		private bool _IsChangeBackgroundColorAminationStart;
+		public bool m_IsChangeBackgroundColorAminationStart
+		{
+			get { return _IsChangeBackgroundColorAminationStart; }
+			set { this.SetProperty(ref this._IsChangeBackgroundColorAminationStart, value); }
+		}
+
 		#endregion
 
 		#region Commands
-		public DelegateCommand StartAnimationCommand { get; }
+		public DelegateCommand StartChangeFontSizeAnimationCommand { get; }
+		public DelegateCommand StartChangeBackgroundColorAnimationCommand { get; }
 		#endregion
 
 		public MainPageViewModel()
 		{
 			// Create Commands
-			StartAnimationCommand = new DelegateCommand(StartAnimation);
+			StartChangeFontSizeAnimationCommand = new DelegateCommand(StartChangeFontSizeAnimation);
+			StartChangeBackgroundColorAnimationCommand = new DelegateCommand(StartChangeBackgroundColorAnimation);
 		}
 
-		private void StartAnimation()
+		/// <summary>
+		/// Starts the change background color animation.
+		/// </summary>
+		private void StartChangeBackgroundColorAnimation()
 		{
-			m_IsAnimationStart = true;
+			m_IsChangeBackgroundColorAminationStart = true;
+			// １秒待ってfalseにする
+			Task.Run(() =>
+			{
+				Thread.Sleep(1000);
+			}).ContinueWith((r) =>
+			{
+				m_IsChangeBackgroundColorAminationStart = false;
+			});
+
+		}
+
+		private void StartChangeFontSizeAnimation()
+		{
+			m_IsChangeFontSizeAnimationStart = true;
 
 			// １秒待ってfalseにする
 			Task.Run(() =>
@@ -37,7 +63,7 @@ namespace XamarinFormsAnimationSample
 				Thread.Sleep(1000);
 			}).ContinueWith((r) =>
 			{
-				m_IsAnimationStart = false;
+				m_IsChangeFontSizeAnimationStart = false;
 			});
 		}
 	}
