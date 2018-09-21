@@ -16,7 +16,7 @@
 				</Trigger>
 			</Entry.Triggers>
 		</Entry>
-		<Label Text="Welcome to Xamarin.Forms!" x:Name="testLabel" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="30">
+		<Label Text="Welcome to Xamarin.Forms!" x:Name="testLabel" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="15">
 			<Label.Triggers>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeBackgroundColorAminationStart}" Value="true">
 					<DataTrigger.EnterActions>
