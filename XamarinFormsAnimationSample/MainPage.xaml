@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XamarinFormsAnimationSample" xmlns:trigger="clr-namespace:XamarinFormsAnimationSample.Triggers" x:Class="XamarinFormsAnimationSample.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XamarinFormsAnimationSample" xmlns:trigger="clr-namespace:XamarinFormsAnimationSample.Triggers" x:Class="XamarinFormsAnimationSample.MainPage" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true">
 	<ContentPage.BindingContext>
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout>
-		<Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="Teal">
+		<Entry Placeholder="test">
+			<Entry.Triggers>
+				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
+					<Trigger.EnterActions>
+						<trigger:ChangeBackgroundColorTriggerAction StartsFrom="0"/>
+					</Trigger.EnterActions>
+					<Trigger.ExitActions>
+						<trigger:ChangeBackgroundColorTriggerAction StartsFrom="1"/>
+					</Trigger.ExitActions>
+				</Trigger>
+			</Entry.Triggers>
+		</Entry>
+		<Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
 			<Label.Triggers>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeBackgroundColorAminationStart}" Value="true">
 					<DataTrigger.EnterActions>
