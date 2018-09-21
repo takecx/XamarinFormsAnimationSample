@@ -5,7 +5,9 @@ namespace XamarinFormsAnimationSample.Triggers
 {
 	public class LabelFontSizeTriggerAction : TriggerAction<VisualElement>
 	{
-		public int FontSize { get; set; }
+		public int AddingFontSize { get; set; }
+		public int InitialFontSize { get; set; }
+		public int StartsFrom { set; get; }
 
 		public LabelFontSizeTriggerAction()
 		{
@@ -15,10 +17,12 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			var animation = new Animation((d) =>
 			{
+				var percent = StartsFrom == 1 ? d : 1 - d;
+				var currentSize = AddingFontSize * percent;
 				var label = sender as Label;
-				label.FontSize = FontSize;
+				label.FontSize = InitialFontSize + currentSize;
 			});
-			sender.Animate("", animation, length: 1000, easing: Easing.Linear);
+			sender.Animate("LabelFontSize", animation, length: 1000, easing: Easing.Linear);
 		}
 	}
 }
