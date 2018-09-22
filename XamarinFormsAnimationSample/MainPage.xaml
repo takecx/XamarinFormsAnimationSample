@@ -28,14 +28,14 @@
 				</DataTrigger>  
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="true">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeTriggerAction AddingFontSize="5" StartsFrom="1" InitialFontSize="15"/>
-						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="0"/>
+						<trigger:LabelFontSizeTriggerAction AddingFontSize="5" StartsFrom="0" InitialFontSize="15"/>
+						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="0" From="Black" To="Lime"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="false">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeTriggerAction AddingFontSize="5" StartsFrom="0" InitialFontSize="15"/>
-						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="1"/>
+						<trigger:LabelFontSizeTriggerAction AddingFontSize="5" StartsFrom="1" InitialFontSize="15"/>
+						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="1" From="Black" To="Lime"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>
 			</Label.Triggers>

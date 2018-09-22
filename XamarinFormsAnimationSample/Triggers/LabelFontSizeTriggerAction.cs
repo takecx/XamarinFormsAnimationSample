@@ -17,7 +17,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			var animation = new Animation((d) =>
 			{
-				var percent = StartsFrom == 1 ? d : 1 - d;
+				var percent = StartsFrom == 0 ? d : 1 - d;
 				var currentSize = AddingFontSize * percent;
 				var label = sender as Label;
 				label.FontSize = InitialFontSize + currentSize;
