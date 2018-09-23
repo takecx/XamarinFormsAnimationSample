@@ -22,9 +22,10 @@ namespace XamarinFormsAnimationSample.Triggers
 
 		protected override void Invoke(VisualElement sender)
 		{
+			CalculateGap();
+
 			sender.Animate("ChangeLabelTextColor", new Animation((d) =>
 			{
-				CalculateGap();
 				var percent = StartsFrom == 0 ? d : 1 - d;
 				var rVal = _RGap * percent;
 				var gVal = _GGap * percent;
