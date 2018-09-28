@@ -8,6 +8,8 @@ Xamarin.Forms : 3.0.0.482510
 ## VisualElement
 - Change BackgroundColor
     - (int)StartsFrom : 変化率の初期値[0,1]
+- Opacity
+    - (int)StartsFrom : 変化率の初期値[0,1]
 
 ## Label
 - Change FontSize
@@ -25,4 +27,4 @@ Xamarin.Forms : 3.0.0.482510
 
 黒字プロパティを随時追加していく予定です.
 
-<https://drive.google.com/file/d/1cYChmthboGXX__Rg5pFC1O2pTNE7vWGy/view?usp=sharing>
+<https://drive.google.com/file/d/1cYChmthboGXX__Rg5pFC1O2pTNE7vWGy/view?usp=sharing>
