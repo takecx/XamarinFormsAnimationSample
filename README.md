@@ -1,6 +1,9 @@
 # XamarinFormsAnimationSample
 UI Animation Sample with Xamarin.Forms 
 
+# Environments
+Xamarin.Forms : 3.0.0.482510
+
 # Animation List
 ## VisualElement
 - Change BackgroundColor
