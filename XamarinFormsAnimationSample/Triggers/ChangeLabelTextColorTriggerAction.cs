@@ -37,6 +37,9 @@ namespace XamarinFormsAnimationSample.Triggers
 			easing: Easing.Linear);
 		}
 
+		/// <summary>
+		/// Calculates the gap between From and To.
+		/// </summary>
 		private void CalculateGap()
 		{
 			_RGap = To.R - From.R;
