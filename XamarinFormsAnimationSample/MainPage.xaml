@@ -9,9 +9,11 @@
 				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
 					<Trigger.EnterActions>
 						<trigger:ChangeBackgroundColorTriggerAction StartsFrom="0"/>
+						<trigger:OpacityTriggerAction StartsFrom="0"/>
 					</Trigger.EnterActions>
 					<Trigger.ExitActions>
 						<trigger:ChangeBackgroundColorTriggerAction StartsFrom="1"/>
+						<trigger:OpacityTriggerAction StartsFrom="1"/>
 					</Trigger.ExitActions>
 				</Trigger>
 			</Entry.Triggers>
