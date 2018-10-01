@@ -5,7 +5,7 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class ChangeLabelTextColorTriggerAction : TriggerAction<VisualElement>
+	public class LabelTextColorAnimation : TriggerAction<VisualElement>
 	{
 		// Animation Parameter
 		public Color From { set; get; }
@@ -19,7 +19,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		private double _GGap;
 		private double _BGap;
 
-		public ChangeLabelTextColorTriggerAction()
+		public LabelTextColorAnimation()
 		{
 			if (From == null || To == null) throw new InvalidDataException("There's no From or(and) To Color.");
 		}
@@ -28,7 +28,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			CalculateGap();
 
-			sender.Animate("ChangeLabelTextColor", new Animation((d) =>
+			sender.Animate("LabelTextColor", new Animation((d) =>
 			{
 				var animationRatio = StartsFrom == 0 ? d : 1 - d;
 				var rVal = _RGap * animationRatio;

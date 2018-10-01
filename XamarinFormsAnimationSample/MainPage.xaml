@@ -30,14 +30,14 @@
 				</DataTrigger>  
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="true">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeDoubleAnimation StartsFrom="0" From="15" To="20" Easing="BounceIn"/>
-						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="0" From="Black" To="Lime"/>
+						<trigger:LabelFontSizeDoubleAnimation StartsFrom="0" From="15" To="20" />
+						<trigger:LabelTextColorAnimation StartsFrom="0" From="Black" To="Lime"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="false">
 					<DataTrigger.EnterActions>
 						<trigger:LabelFontSizeDoubleAnimation StartsFrom="1" From="15" To="20"/>
-						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="1" From="Black" To="Lime"/>
+						<trigger:LabelTextColorAnimation StartsFrom="1" From="Black" To="Lime"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>
 			</Label.Triggers>
