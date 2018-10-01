@@ -18,7 +18,7 @@
 				</Trigger>
 			</Entry.Triggers>
 		</Entry>
-		<Label Text="Welcome to Xamarin.Forms!" x:Name="testLabel" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="15">
+		<Label Text="Welcome to Xamarin.Forms!" x:Name="testLabel" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="15">
 			<Label.Triggers>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeBackgroundColorAminationStart}" Value="true">
 					<DataTrigger.EnterActions>
@@ -30,13 +30,13 @@
 				</DataTrigger>  
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="true">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeTriggerAction AddingFontSize="5" StartsFrom="0" InitialFontSize="15"/>
+						<trigger:LabelFontSizeDoubleAnimation StartsFrom="0" From="15" To="20" Easing="BounceIn"/>
 						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="0" From="Black" To="Lime"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="false">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeTriggerAction AddingFontSize="5" StartsFrom="1" InitialFontSize="15"/>
+						<trigger:LabelFontSizeDoubleAnimation StartsFrom="1" From="15" To="20"/>
 						<trigger:ChangeLabelTextColorTriggerAction StartsFrom="1" From="Black" To="Lime"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>

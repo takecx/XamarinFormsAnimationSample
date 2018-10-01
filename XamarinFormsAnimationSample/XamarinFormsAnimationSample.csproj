@@ -12,5 +12,7 @@
     <Folder Include="Triggers\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Triggers\VisualElement\" />
+    <Folder Include="Triggers\Label\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
 </Project>
