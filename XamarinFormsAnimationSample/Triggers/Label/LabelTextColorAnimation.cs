@@ -5,7 +5,7 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class LabelTextColorAnimation : TriggerAction<VisualElement>
+	public class LabelTextColorAnimation : TriggerAction<Label>
 	{
 		// Animation Parameter
 		public Color From { set; get; }
@@ -18,12 +18,12 @@ namespace XamarinFormsAnimationSample.Triggers
 		/// Invoke change Label TextColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
-		protected override void Invoke(VisualElement sender)
+		protected override void Invoke(Label sender)
 		{
 			sender.Animate("LabelTextColorAnimation", new Animation((d) =>
 			{
 				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				(sender as Label).TextColor = AnimationUtil.CalculateCurrentValue(From, To, animationRatio);
+				sender.TextColor = AnimationUtil.CalculateCurrentValue(From, To, animationRatio);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));

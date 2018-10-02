@@ -4,7 +4,7 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class LabelFontSizeDoubleAnimation : TriggerAction<VisualElement>
+	public class LabelFontSizeDoubleAnimation : TriggerAction<Label>
 	{
 		// Animation Parameter
 		public double From { get; set; }
@@ -17,12 +17,12 @@ namespace XamarinFormsAnimationSample.Triggers
 		/// Invoke change font-size animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
-		protected override void Invoke(VisualElement sender)
+		protected override void Invoke(Label sender)
 		{
 			var animation = new Animation((d) =>
 			{
 				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				(sender as Label).FontSize = AnimationUtil.CalcCurrentValue(From, To, animationRatio);
+				sender.FontSize = AnimationUtil.CalcCurrentValue(From, To, animationRatio);
 			});
 			sender.Animate("LabelFontSizeAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
