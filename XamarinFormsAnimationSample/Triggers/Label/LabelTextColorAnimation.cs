@@ -1,11 +1,12 @@
 ﻿using System;
 using System.IO;
 using Xamarin.Forms;
+using XamarinFormsAnimationSample.Interfaces;
 using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class LabelTextColorAnimation : TriggerAction<VisualElement>
+	public class LabelTextColorAnimation : TriggerAction<VisualElement>, ITriggerAction<Color>
 	{
 		// Animation Parameter
 		public Color From { set; get; }
@@ -14,41 +15,35 @@ namespace XamarinFormsAnimationSample.Triggers
 		public uint Length { get; set; } = 1000;
 		public string Easing { get; set; } = "Linear";
 
-		// FromとToの差を保持する
-		private double _RGap;
-		private double _GGap;
-		private double _BGap;
-
-		public LabelTextColorAnimation()
+		/// <summary>
+		/// Calculates the gap Color between From and To.
+		/// </summary>
+		/// <returns>The gap.</returns>
+		/// <param name="from">From.</param>
+		/// <param name="to">To.</param>
+		public Color CalculateGap(Color from, Color to)
 		{
-			if (From == null || To == null) throw new InvalidDataException("There's no From or(and) To Color.");
+			return Color.FromRgb(to.R - from.R, to.G - from.G, to.B - from.B);
 		}
 
+		/// <summary>
+		/// Invoke change Label TextColor animation.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
-			CalculateGap();
+			var gap = CalculateGap(From, To);
 
-			sender.Animate("LabelTextColor", new Animation((d) =>
+			sender.Animate("LabelTextColorAnimation", new Animation((d) =>
 			{
 				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				var rVal = _RGap * animationRatio;
-				var gVal = _GGap * animationRatio;
-				var bVal = _BGap * animationRatio;
+				var rVal = gap.R * animationRatio;
+				var gVal = gap.G * animationRatio;
+				var bVal = gap.B * animationRatio;
 				(sender as Label).TextColor = Color.FromRgb(From.R + rVal, From.G + gVal, From.B + bVal);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));
 		}
-
-		/// <summary>
-		/// Calculates the gap between From and To.
-		/// </summary>
-		private void CalculateGap()
-		{
-			_RGap = To.R - From.R;
-			_GGap = To.G - From.G;
-			_BGap = To.B - From.B;
-		}
-
 	}
 }

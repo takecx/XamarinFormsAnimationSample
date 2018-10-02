@@ -9,11 +9,11 @@
 				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
 					<Trigger.EnterActions>
 						<trigger:BackgroundColorAnimation StartsFrom="0" From="White" To="Blue"/>
-<!--						<trigger:OpacityTriggerAction StartsFrom="0"/>-->
+						<trigger:OpacityDoubleAnimation StartsFrom="0" From="1" To="0"/>
 					</Trigger.EnterActions>
 					<Trigger.ExitActions>
 						<trigger:BackgroundColorAnimation StartsFrom="1" From="White" To="Blue"/>
-<!--						<trigger:OpacityTriggerAction StartsFrom="1"/>-->
+						<trigger:OpacityDoubleAnimation StartsFrom="1" From="1" To="0"/>
 					</Trigger.ExitActions>
 				</Trigger>
 			</Entry.Triggers>

@@ -14,5 +14,6 @@
     <Folder Include="Triggers\VisualElement\" />
     <Folder Include="Triggers\Label\" />
     <Folder Include="Utils\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>
