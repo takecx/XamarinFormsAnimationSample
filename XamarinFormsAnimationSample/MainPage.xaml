@@ -10,10 +10,12 @@
 					<Trigger.EnterActions>
 						<trigger:BackgroundColorAnimation StartsFrom="0" From="White" To="Blue"/>
 						<trigger:OpacityDoubleAnimation StartsFrom="0" From="1" To="0"/>
+						<trigger:HeightRequestDoubleAnimation StartsFrom="0" From="10" To="100"/>
 					</Trigger.EnterActions>
 					<Trigger.ExitActions>
 						<trigger:BackgroundColorAnimation StartsFrom="1" From="White" To="Blue"/>
 						<trigger:OpacityDoubleAnimation StartsFrom="1" From="1" To="0"/>
+						<trigger:HeightRequestDoubleAnimation StartsFrom="1" From="10" To="100"/>
 					</Trigger.ExitActions>
 				</Trigger>
 			</Entry.Triggers>
