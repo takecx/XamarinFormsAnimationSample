@@ -5,7 +5,7 @@ namespace XamarinFormsAnimationSample.Utils
 {
 	public static class AnimationUtil
 	{
-		public static double CalculateCurrentValue(double from, double to, double animationRatio)
+		public static double CalcCurrentValue(double from, double to, double animationRatio)
 		{
 			var gap = to - from;
 			return from + gap * animationRatio;

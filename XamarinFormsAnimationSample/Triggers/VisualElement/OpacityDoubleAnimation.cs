@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			sender.Animate("OpacityDoubleAnimation", new Animation((d) =>
 			{
 				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				sender.Opacity = AnimationUtil.CalculateCurrentValue(From, To, animationRatio);
+				sender.Opacity = AnimationUtil.CalcCurrentValue(From, To, animationRatio);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));

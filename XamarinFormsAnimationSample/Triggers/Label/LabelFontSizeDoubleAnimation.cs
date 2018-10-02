@@ -22,7 +22,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			var animation = new Animation((d) =>
 			{
 				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				(sender as Label).FontSize = AnimationUtil.CalculateCurrentValue(From, To, animationRatio);
+				(sender as Label).FontSize = AnimationUtil.CalcCurrentValue(From, To, animationRatio);
 			});
 			sender.Animate("LabelFontSizeAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
