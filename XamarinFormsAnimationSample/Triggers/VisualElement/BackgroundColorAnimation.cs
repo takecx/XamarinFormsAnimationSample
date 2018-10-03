@@ -7,15 +7,8 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class BackgroundColorAnimation : TriggerAction<VisualElement>
+	public class BackgroundColorAnimation : AnimationBase<Color>
 	{
-		// Animation Parameter
-		public Color From { get; set; }
-		public Color To { get; set; }
-		public int StartsFrom { set; get; }
-		public uint Length { get; set; } = 1000;
-		public string Easing { get; set; } = "Linear";
-
 		/// <summary>
 		/// Invoke change BackgroundColor animation.
 		/// </summary>

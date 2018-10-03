@@ -4,15 +4,8 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class HeightRequestDoubleAnimation : TriggerAction<VisualElement>
+	public class HeightRequestDoubleAnimation : AnimationBase<double>
 	{
-		// Animation Parameter
-		public double From { get; set; }
-		public double To { get; set; }
-		public int StartsFrom { set; get; }
-		public uint Length { get; set; } = 1000;
-		public string Easing { get; set; } = "Linear";
-
 		protected override void Invoke(VisualElement sender)
 		{
 			sender.Animate("HeightRequestDoubleAnimation", new Animation((d) =>

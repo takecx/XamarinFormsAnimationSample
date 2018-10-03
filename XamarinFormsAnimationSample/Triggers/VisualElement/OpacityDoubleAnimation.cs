@@ -4,15 +4,8 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class OpacityDoubleAnimation : TriggerAction<VisualElement>
+	public class OpacityDoubleAnimation : AnimationBase<double>
 	{
-		// Animation Parameter
-		public double From { get; set; }
-		public double To { get; set; }
-		public int StartsFrom { set; get; }
-		public uint Length { get; set; } = 1000;
-		public string Easing { get; set; } = "Linear";
-
 		protected override void Invoke(VisualElement sender)
 		{
 			sender.Animate("OpacityDoubleAnimation", new Animation((d) =>
