@@ -8,10 +8,11 @@ namespace XamarinFormsAnimationSample.Triggers
 	{
 		protected override void Invoke(VisualElement sender)
 		{
+			SetDefaultValueIfNeeded(sender.Height);
+
 			sender.Animate("HeightRequestDoubleAnimation", new Animation((d) =>
 			{
-				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				sender.HeightRequest = AnimationUtil.CalcCurrentValue(From, To, animationRatio);
+				sender.HeightRequest = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));

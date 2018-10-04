@@ -12,10 +12,11 @@ namespace XamarinFormsAnimationSample.Triggers
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
+			SetDefaultValueIfNeeded((sender as Label).FontSize);
+
 			var animation = new Animation((d) =>
 			{
-				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				(sender as Label).FontSize = AnimationUtil.CalcCurrentValue(From, To, animationRatio);
+				(sender as Label).FontSize = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
 			sender.Animate("LabelFontSizeAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}

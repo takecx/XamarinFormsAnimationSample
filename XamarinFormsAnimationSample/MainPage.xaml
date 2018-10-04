@@ -4,45 +4,51 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout BackgroundColor="Silver">
-		<Entry Placeholder="test">
+		<Entry Placeholder="test" BackgroundColor="Olive">
 			<Entry.Triggers>
 				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
 					<Trigger.EnterActions>
-						<trigger:BackgroundColorAnimation StartsFrom="0" From="White" To="Blue"/>
-						<trigger:OpacityDoubleAnimation StartsFrom="0" From="1" To="0"/>
-						<trigger:HeightRequestDoubleAnimation StartsFrom="0" From="10" To="100"/>
+						<trigger:BackgroundColorAnimation To="Blue"/>
+<!--						<trigger:OpacityDoubleAnimation To="0"/>-->
+<!--						<trigger:HeightRequestDoubleAnimation To="100"/>-->
 					</Trigger.EnterActions>
 					<Trigger.ExitActions>
-						<trigger:BackgroundColorAnimation StartsFrom="1" From="White" To="Blue"/>
-						<trigger:OpacityDoubleAnimation StartsFrom="1" From="1" To="0"/>
-						<trigger:HeightRequestDoubleAnimation StartsFrom="1" From="10" To="100"/>
+						<trigger:BackgroundColorAnimation To="Olive"/>
+<!--						<trigger:OpacityDoubleAnimation To="1"/>-->
+<!--						<trigger:HeightRequestDoubleAnimation To="50"/>-->
 					</Trigger.ExitActions>
 				</Trigger>
 			</Entry.Triggers>
 		</Entry>
-		<Label Text="Welcome to Xamarin.Forms!" x:Name="testLabel" TextColor="Black" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="15">
+		<Label Text="Welcome to Xamarin.Forms!" x:Name="testLabel" TextColor="Black" BackgroundColor="Gray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="15">
 			<Label.Triggers>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeBackgroundColorAminationStart}" Value="true">
 					<DataTrigger.EnterActions>
-						<trigger:BackgroundColorAnimation StartsFrom="0" From="Gray" To="Green"/>
-					</DataTrigger.EnterActions>
+						<trigger:BackgroundColorAnimation To="Green"/>
+<!--						<trigger:WidthRequestDoubleAnimation To="100"/>
+						<trigger:MarginThicknessAnimation To="10,10,10,10"/>
+-->					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
-						<trigger:BackgroundColorAnimation StartsFrom="1" From="Gray" To="Green"/>
+						<trigger:BackgroundColorAnimation To="Gray"/>
 					</DataTrigger.ExitActions>
 				</DataTrigger>  
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="true">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeDoubleAnimation StartsFrom="0" From="15" To="20" />
-						<trigger:LabelTextColorAnimation StartsFrom="0" From="Black" To="Lime"/>
+<!--						<trigger:LabelFontSizeDoubleAnimation To="20" />-->
+						<trigger:LabelTextColorAnimation To="Lime"/>
 					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+<!--						<trigger:LabelFontSizeDoubleAnimation To="15"/>-->
+						<trigger:LabelTextColorAnimation To="Black"/>
+					</DataTrigger.ExitActions>
 				</DataTrigger>
-				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="false">
+<!--				<DataTrigger TargetType="Label" Binding="{Binding Path=m_IsChangeFontSizeAnimationStart}" Value="false">
 					<DataTrigger.EnterActions>
-						<trigger:LabelFontSizeDoubleAnimation StartsFrom="1" From="15" To="20"/>
-						<trigger:LabelTextColorAnimation StartsFrom="1" From="Black" To="Lime"/>
+						<trigger:LabelFontSizeDoubleAnimation To="15"/>
+						<trigger:LabelTextColorAnimation To="Black"/>
 					</DataTrigger.EnterActions>
 				</DataTrigger>
-			</Label.Triggers>
+-->			</Label.Triggers>
 		</Label>
 		<Button Command="{Binding StartChangeBackgroundColorAnimationCommand}" Text="Change BackgroundColor"/>
 		<Button Command="{Binding StartChangeFontSizeAnimationCommand}" Text="Change FontSize"/>

@@ -45,7 +45,7 @@ namespace XamarinFormsAnimationSample
 			// １秒待ってfalseにする
 			Task.Run(() =>
 			{
-				Thread.Sleep(1000);
+				Thread.Sleep(3000);
 			}).ContinueWith((r) =>
 			{
 				m_IsChangeBackgroundColorAminationStart = false;

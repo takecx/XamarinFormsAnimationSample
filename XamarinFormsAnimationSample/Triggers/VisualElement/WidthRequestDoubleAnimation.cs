@@ -4,15 +4,15 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class OpacityDoubleAnimation : AnimationBase<double>
+	public class WidthRequestDoubleAnimation : AnimationBase<double>
 	{
 		protected override void Invoke(VisualElement sender)
 		{
-			SetDefaultValueIfNeeded(sender.Opacity);
+			SetDefaultValueIfNeeded(sender.WidthRequest);
 
-			sender.Animate("OpacityDoubleAnimation", new Animation((d) =>
+			sender.Animate("HeightRequestDoubleAnimation", new Animation((d) =>
 			{
-				sender.Opacity = AnimationUtil.CalcCurrentValue(From, To, d);
+				sender.WidthRequest = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));

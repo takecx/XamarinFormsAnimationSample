@@ -13,10 +13,11 @@ namespace XamarinFormsAnimationSample.Triggers
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
+			SetDefaultValueIfNeeded((sender as Label).TextColor);
+
 			sender.Animate("LabelTextColorAnimation", new Animation((d) =>
 			{
-				var animationRatio = StartsFrom == 0 ? d : 1 - d;
-				(sender as Label).TextColor = AnimationUtil.CalculateCurrentValue(From, To, animationRatio);
+				(sender as Label).TextColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));

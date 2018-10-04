@@ -11,14 +11,18 @@ namespace XamarinFormsAnimationSample.Utils
 			return from + gap * animationRatio;
 		}
 
-		public static Color CalculateCurrentValue(Color from, Color to, double animationRatio)
+		public static Color CalcCurrentValue(Color from, Color to, double animationRatio)
 		{
-			var gap = Color.FromRgb(to.R - from.R, to.G - from.G, to.B - from.B);
-			var rVal = gap.R * animationRatio;
-			var gVal = gap.G * animationRatio;
-			var bVal = gap.B * animationRatio;
-
+			var rVal = (to.R - from.R) * animationRatio;
+			var gVal = (to.G - from.G) * animationRatio;
+			var bVal = (to.B - from.B) * animationRatio;
 			return Color.FromRgb(from.R + rVal, from.G + gVal, from.B + bVal);
+		}
+
+		public static Thickness CalcCurrentValue(Thickness from, Thickness to, double animationRatio)
+		{
+			var gap = new Thickness(to.Left - from.Left, to.Top - from.Top, to.Right - from.Right, to.Bottom - from.Bottom);
+			return new Thickness(from.Left + gap.Left, from.Top + gap.Top, from.Right + gap.Right, from.Bottom + gap.Bottom);
 		}
 	}
 }
