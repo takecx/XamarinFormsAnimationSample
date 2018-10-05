@@ -6,7 +6,7 @@ Xamarin.Forms : 3.0.0.482510
 
 # Common Property
 ~~~C#
-public T From { get; set; } = default(T); // Animation starting point
+public T From { get; set; } = default(T); // Animation starting point
 public T To { get; set; } = default(T); // Animation ending point
 public uint Length { get; set; } = 1000; // Animation Length (milliseconds)
 public string Easing { get; set; } = "Linear"; // Animation EasingFunction name(https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.easing?view=xamarin-forms)
