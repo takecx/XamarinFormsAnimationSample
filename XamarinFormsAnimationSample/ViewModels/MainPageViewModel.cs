@@ -21,12 +21,19 @@ namespace XamarinFormsAnimationSample
 			get { return _IsChangeBackgroundColorAminationStart; }
 			set { this.SetProperty(ref this._IsChangeBackgroundColorAminationStart, value); }
 		}
+		private bool _IndicatorProgressing;
+		public bool m_IndicatorProgressing
+		{
+			get { return _IndicatorProgressing; }
+			set { this.SetProperty(ref this._IndicatorProgressing, value); }
+		}
 
 		#endregion
 
 		#region Commands
 		public DelegateCommand StartChangeFontSizeAnimationCommand { get; }
 		public DelegateCommand StartChangeBackgroundColorAnimationCommand { get; }
+		public DelegateCommand StartChangeActivityIndicatorColorAnimationCommand { get; }
 		#endregion
 
 		public MainPageViewModel()
@@ -34,6 +41,20 @@ namespace XamarinFormsAnimationSample
 			// Create Commands
 			StartChangeFontSizeAnimationCommand = new DelegateCommand(StartChangeFontSizeAnimation);
 			StartChangeBackgroundColorAnimationCommand = new DelegateCommand(StartChangeBackgroundColorAnimation);
+			StartChangeActivityIndicatorColorAnimationCommand = new DelegateCommand(StartChangeActivityIndicatorColorAnimation);
+		}
+
+		private void StartChangeActivityIndicatorColorAnimation()
+		{
+			m_IndicatorProgressing = true;
+			Task.Run(() =>
+			{
+				Thread.Sleep(3000);
+			}).ContinueWith((r) =>
+			{
+				m_IndicatorProgressing = false;
+			});
+
 		}
 
 		/// <summary>
@@ -42,7 +63,6 @@ namespace XamarinFormsAnimationSample
 		private void StartChangeBackgroundColorAnimation()
 		{
 			m_IsChangeBackgroundColorAminationStart = true;
-			// １秒待ってfalseにする
 			Task.Run(() =>
 			{
 				Thread.Sleep(3000);
@@ -57,7 +77,6 @@ namespace XamarinFormsAnimationSample
 		{
 			m_IsChangeFontSizeAnimationStart = true;
 
-			// １秒待ってfalseにする
 			Task.Run(() =>
 			{
 				Thread.Sleep(3000);

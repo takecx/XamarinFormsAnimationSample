@@ -4,6 +4,19 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout BackgroundColor="Silver">
+		<StackLayout Orientation="Horizontal">
+		<ActivityIndicator Color="Black" >
+			<ActivityIndicator.Triggers>
+					<DataTrigger TargetType="ActivityIndicator" Binding="{Binding Path=m_IndicatorProgressing}" Value="true">
+						<Setter Property="IsRunning" Value="True"/>
+						<DataTrigger.EnterActions>
+							<trigger:ActivityIndicatorColorAnimation To="Red"/>
+						</DataTrigger.EnterActions>
+					</DataTrigger>
+			</ActivityIndicator.Triggers>
+		</ActivityIndicator>
+			<Button Command="{Binding StartChangeActivityIndicatorColorAnimationCommand}" Text="Indicator Color"/>
+		</StackLayout>
 		<Entry Placeholder="Margin" Margin="10">
 			<Label.Triggers>
 				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">

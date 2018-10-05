@@ -15,6 +15,7 @@
     <Folder Include="Triggers\Label\" />
     <Folder Include="Utils\" />
     <Folder Include="Triggers\View\" />
+    <Folder Include="Triggers\ActivityIndicator\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />
