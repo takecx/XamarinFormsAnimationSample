@@ -21,8 +21,10 @@ namespace XamarinFormsAnimationSample.Utils
 
 		public static Thickness CalcCurrentValue(Thickness from, Thickness to, double animationRatio)
 		{
-			var gap = new Thickness(to.Left - from.Left, to.Top - from.Top, to.Right - from.Right, to.Bottom - from.Bottom);
-			return new Thickness(from.Left + gap.Left, from.Top + gap.Top, from.Right + gap.Right, from.Bottom + gap.Bottom);
+			return new Thickness(from.Left + (to.Left - from.Left),
+								 from.Top + (to.Top - from.Top),
+								 from.Right + (to.Right - from.Right),
+								 from.Bottom + (to.Bottom - from.Bottom));
 		}
 	}
 }

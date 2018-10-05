@@ -4,6 +4,18 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout BackgroundColor="Silver">
+		<Entry Placeholder="Margin" Margin="10">
+			<Label.Triggers>
+				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
+					<Trigger.EnterActions>
+						<trigger:MarginThicknessAnimation To="20" Length="3000"/>
+					</Trigger.EnterActions>
+					<Trigger.ExitActions>
+						<trigger:WidthRequestDoubleAnimation To="10" Length="3000"/>
+					</Trigger.ExitActions>
+				</Trigger>
+			</Label.Triggers>
+		</Entry>
 		<Entry Placeholder="test" BackgroundColor="Olive">
 			<Entry.Triggers>
 				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
