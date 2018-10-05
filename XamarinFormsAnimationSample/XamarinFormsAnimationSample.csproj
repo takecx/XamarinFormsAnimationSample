@@ -16,6 +16,7 @@
     <Folder Include="Utils\" />
     <Folder Include="Triggers\View\" />
     <Folder Include="Triggers\ActivityIndicator\" />
+    <Folder Include="Triggers\BoxView\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />

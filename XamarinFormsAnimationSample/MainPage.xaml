@@ -4,6 +4,19 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout BackgroundColor="Silver">
+		<Button Text="Go!" Command="{Binding GoAnimationCommand}"/>
+		<BoxView Color="Black">
+			<BoxView.Triggers>
+				<DataTrigger TargetType="BoxView" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:BoxViewColorAnimation To="Red"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:BoxViewColorAnimation To="Black"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</BoxView.Triggers>
+		</BoxView>
 		<StackLayout Orientation="Horizontal">
 		<ActivityIndicator Color="Black" >
 			<ActivityIndicator.Triggers>

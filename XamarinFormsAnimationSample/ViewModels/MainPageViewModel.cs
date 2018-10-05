@@ -27,6 +27,12 @@ namespace XamarinFormsAnimationSample
 			get { return _IndicatorProgressing; }
 			set { this.SetProperty(ref this._IndicatorProgressing, value); }
 		}
+		private bool _GoAnimation;
+		public bool m_GoAnimation
+		{
+			get { return _GoAnimation; }
+			set { this.SetProperty(ref this._GoAnimation, value); }
+		}
 
 		#endregion
 
@@ -34,6 +40,7 @@ namespace XamarinFormsAnimationSample
 		public DelegateCommand StartChangeFontSizeAnimationCommand { get; }
 		public DelegateCommand StartChangeBackgroundColorAnimationCommand { get; }
 		public DelegateCommand StartChangeActivityIndicatorColorAnimationCommand { get; }
+		public DelegateCommand GoAnimationCommand { get; }
 		#endregion
 
 		public MainPageViewModel()
@@ -42,6 +49,19 @@ namespace XamarinFormsAnimationSample
 			StartChangeFontSizeAnimationCommand = new DelegateCommand(StartChangeFontSizeAnimation);
 			StartChangeBackgroundColorAnimationCommand = new DelegateCommand(StartChangeBackgroundColorAnimation);
 			StartChangeActivityIndicatorColorAnimationCommand = new DelegateCommand(StartChangeActivityIndicatorColorAnimation);
+			GoAnimationCommand = new DelegateCommand(GoAnimation);
+		}
+
+		private void GoAnimation()
+		{
+			m_GoAnimation = true;
+			Task.Run(() =>
+			{
+				Thread.Sleep(3000);
+			}).ContinueWith((r) =>
+			{
+				m_GoAnimation = false;
+			});
 		}
 
 		private void StartChangeActivityIndicatorColorAnimation()
@@ -54,7 +74,23 @@ namespace XamarinFormsAnimationSample
 			{
 				m_IndicatorProgressing = false;
 			});
+		}
 
+		/// <summary>
+		/// フラグを変更して指定ミリ秒後にもとに戻す
+		/// </summary>
+		/// <param name="inFlag">If set to <c>true</c> in flag.</param>
+		/// <param name="sleepTime">Sleep time.</param>
+		private void ChangeFlag(bool inFlag, int sleepTime = 1000)
+		{
+			inFlag = true;
+			Task.Run(() =>
+			{
+				Thread.Sleep(sleepTime);
+			}).ContinueWith((r) =>
+			{
+				inFlag = false;
+			});
 		}
 
 		/// <summary>
@@ -70,13 +106,11 @@ namespace XamarinFormsAnimationSample
 			{
 				m_IsChangeBackgroundColorAminationStart = false;
 			});
-
 		}
 
 		private void StartChangeFontSizeAnimation()
 		{
 			m_IsChangeFontSizeAnimationStart = true;
-
 			Task.Run(() =>
 			{
 				Thread.Sleep(3000);
