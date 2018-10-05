@@ -4,7 +4,18 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout BackgroundColor="Silver">
-		<Button Text="Go!" Command="{Binding GoAnimationCommand}"/>
+		<Button Text="Go!" Command="{Binding GoAnimationCommand}" BorderColor="Black" BorderWidth="2" Margin="5">
+			<Button.Triggers>
+				<DataTrigger TargetType="Button" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:ButtonBorderColorAnimation To="Green"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:ButtonBorderColorAnimation To="Black"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>				
+			</Button.Triggers>
+		</Button>
 		<BoxView Color="Black">
 			<BoxView.Triggers>
 				<DataTrigger TargetType="BoxView" Binding="{Binding Path=m_GoAnimation}" Value="True">

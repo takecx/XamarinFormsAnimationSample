@@ -32,9 +32,9 @@ LengthとEasingは必要に応じて変更してください。
 | Label| TextColor | LabelTextColorAnimation | Color | O |
 | Label| LineHeight | LabelLineHeightDoubleAnimation | double | ? |
 | ActivityIndicator | Color | ActivityIndicatorColorAnimation | Color| △ |
-| BoxView | Color | BoxViewColorAnimation | Color | X |
-| BoxView | CornerRadius | BoxViewCornerRadiusAnimation | CornerRadius | X |
-| Button | BorderColor | ButtonBorderColorAnimation | Color | X |
+| BoxView | Color | BoxViewColorAnimation | Color | O |
+| BoxView | CornerRadius | BoxViewCornerRadiusAnimation | CornerRadius | ? |
+| Button | BorderColor | ButtonBorderColorAnimation | Color | O |
 | Button | BorderWidth | ButtonBorderWidthDoubleAnimation | double | X|
 | Button | CornerRadius | ButtonCornerRadiusAnimation | CornerRadius | X |
 | Button | FontSize | ButtonFontSizeDoubleAnimation | double | X |
