@@ -30,7 +30,7 @@ LengthとEasingは必要に応じて変更してください。
 | View | Margin | MarginThicknessAnimation | Thickness | △ |
 | Label | FontSize | LabelFontSizeDoubleAnimation | double | O |
 | Label| TextColor | LabelTextColorAnimation | Color | O |
-| Label| LineHeight | LabelLineHeightAnimation | double | X |
+| Label| LineHeight | LabelLineHeightDoubleAnimation | double | X |
 | ActivityIndicator | Color | ActivityIndicatorColorAnimation | Color| X |
 | BoxView | Color | BoxViewColorAnimation | Color | X |
 | BoxView | CornerRadius | BoxViewCornerRadiusAnimation | CornerRadius | X |
