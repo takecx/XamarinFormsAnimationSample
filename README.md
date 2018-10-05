@@ -35,11 +35,11 @@ LengthとEasingは必要に応じて変更してください。
 | BoxView | Color | BoxViewColorAnimation | Color | O |
 | BoxView | CornerRadius | BoxViewCornerRadiusAnimation | CornerRadius | ? |
 | Button | BorderColor | ButtonBorderColorAnimation | Color | O |
-| Button | BorderWidth | ButtonBorderWidthDoubleAnimation | double | X|
+| Button | BorderWidth | ButtonBorderWidthDoubleAnimation | double | O |
 | Button | CornerRadius | ButtonCornerRadiusAnimation | CornerRadius | X |
-| Button | FontSize | ButtonFontSizeDoubleAnimation | double | X |
+| Button | FontSize | ButtonFontSizeDoubleAnimation | double | O |
 | Button | Padding | ButtonPaddingThicknessAnimation | Thickness | X |
-| Button | TextColor |ButtonTextColorAnimation | Color | X |
+| Button | TextColor |ButtonTextColorAnimation | Color | O |
 | DatePicker | FontSize | DatePickerFontSizeDoubleAnimation | double | X |
 | DatePicker | TextColor | DatePickerTextColorAnimation | Color | X |
 | Layout | Padding | LayoutPaddingThicknessAnimation | Thickness | X |

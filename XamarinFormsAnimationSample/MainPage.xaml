@@ -4,14 +4,20 @@
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
 	<StackLayout BackgroundColor="Silver">
-		<Button Text="Go!" Command="{Binding GoAnimationCommand}" BorderColor="Black" BorderWidth="2" Margin="5">
+		<Button Text="Go!" Command="{Binding GoAnimationCommand}" BorderColor="Black" BorderWidth="2" FontSize="20" TextColor="Black" Margin="5">
 			<Button.Triggers>
 				<DataTrigger TargetType="Button" Binding="{Binding Path=m_GoAnimation}" Value="True">
 					<DataTrigger.EnterActions>
 						<trigger:ButtonBorderColorAnimation To="Green"/>
+						<trigger:ButtonBorderWidthDoubleAnimation To="4"/>
+						<trigger:ButtonFontSizeDoubleAnimation To="30"/>
+						<trigger:ButtonTextColorAnimation To="Fuchsia"/>
 					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
 						<trigger:ButtonBorderColorAnimation To="Black"/>
+						<trigger:ButtonBorderWidthDoubleAnimation To="2"/>
+						<trigger:ButtonFontSizeDoubleAnimation To="20"/>
+						<trigger:ButtonTextColorAnimation To="Black"/>
 					</DataTrigger.ExitActions>
 				</DataTrigger>				
 			</Button.Triggers>
