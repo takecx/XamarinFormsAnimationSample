@@ -6,7 +6,7 @@ Xamarin.Forms : 3.0.0.482510
 
 # Common Property
 ~~~C#
-public T From { get; set; } = default(T); // Animation starting point
+public T From { get; set; } = default(T); // Animation starting point
 public T To { get; set; } = default(T); // Animation ending point
 public uint Length { get; set; } = 1000; // Animation Length (milliseconds)
 public string Easing { get; set; } = "Linear"; // Animation EasingFunction name(https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.easing?view=xamarin-forms)
@@ -16,9 +16,11 @@ Toは必須項目です。
 
 Fromを指定しない場合は現在のプロパティ値を自動で設定します。
 
+LengthとEasingは必要に応じて変更してください。
+
 # Animation List
 | Property Owner |  Property  |  Animation Class Name | T | Implemented|
-| ---- | ---- | ---- | ---- | :----: |
+| ---- | ---- | ---- | :----: | :----: |
 | VisualElement |  BackgroundColor  |  BackgroundColorAnimation  |  Color  | O |
 | VisualElement |  Opacity  |  OpacityDoubleAnimation  | double |O|
 | VisualElement | HeightRequest | HeightRequestDoubleAnimation | double |O|
@@ -72,5 +74,5 @@ Fromを指定しない場合は現在のプロパティ値を自動で設定し�
 | Frame | CornerRadius | FrameCornerRadiusAnimation | CornerRadius | X |
 | Frame | OutlineColor |FrameOutlineColorAnimation | Color | X |
 
-# Xamarin.Forms namespace Class Diagram
+# Xamarin.Forms namespace Class Diagram
 <https://drive.google.com/file/d/1cYChmthboGXX__Rg5pFC1O2pTNE7vWGy/view?usp=sharing>
