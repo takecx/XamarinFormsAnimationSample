@@ -4,7 +4,7 @@ using XamarinFormsAnimationSample.Utils;
 
 namespace XamarinFormsAnimationSample.Triggers
 {
-	public class MarginThicknessAnimation : AnimationBase<Thickness>
+	public class LayoutPaddingThicknessAnimation : AnimationBase<Thickness>
 	{
 		/// <summary>
 		/// Invoke the Margin Animation.
@@ -12,11 +12,11 @@ namespace XamarinFormsAnimationSample.Triggers
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
-			SetDefaultValueIfNeeded((sender as View).Margin);
+			SetDefaultValueIfNeeded((sender as Layout).Margin);
 
-			sender.Animate("MarginThicknessAnimation", new Animation((d) =>
+			sender.Animate("LayoutPaddingThicknessAnimation", new Animation((d) =>
 			{
-				(sender as View).Margin = AnimationUtil.CalcCurrentValue(From, To, d);
+				(sender as Layout).Margin = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),
 			length: Length,
 			easing: EasingValueConverter.Convert(Easing));

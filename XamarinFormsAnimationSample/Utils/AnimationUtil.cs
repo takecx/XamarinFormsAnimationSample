@@ -21,10 +21,18 @@ namespace XamarinFormsAnimationSample.Utils
 
 		public static Thickness CalcCurrentValue(Thickness from, Thickness to, double animationRatio)
 		{
-			return new Thickness(from.Left + (to.Left - from.Left),
-								 from.Top + (to.Top - from.Top),
-								 from.Right + (to.Right - from.Right),
-								 from.Bottom + (to.Bottom - from.Bottom));
+			return new Thickness(from.Left + (to.Left - from.Left) * animationRatio,
+								 from.Top + (to.Top - from.Top) * animationRatio,
+								 from.Right + (to.Right - from.Right) * animationRatio,
+								 from.Bottom + (to.Bottom - from.Bottom) * animationRatio);
+		}
+
+		public static Rectangle CalcCurrentValue(Rectangle from, Rectangle to, double animationRatio)
+		{
+			return new Rectangle(from.Left + (to.Left - from.Left) * animationRatio,
+								 from.Top + (to.Top - from.Top) * animationRatio,
+								 from.Right + (to.Right - from.Right) * animationRatio,
+								 from.Bottom + (to.Bottom - from.Bottom) * animationRatio);
 		}
 	}
 }

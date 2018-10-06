@@ -69,7 +69,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>Margin</td>
   <td>MarginThicknessAnimation</td>
   <td align=center>Thickness</td>
-  <td align=center>△</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=3>Label</td>
@@ -172,20 +172,20 @@ LengthとEasingは必要に応じて変更してください。
   <td>LayoutBounds</td>
   <td>AbsoluteLayoutBoundsRectangleAnimation</td>
   <td align=center>Rectangle</td>
-  <td align=center>X</td>
+  <td align=center>?</td>
 </tr>
 <tr>
   <td rowspan=2>Grid</td>
   <td>ColumnSpacing</td>
   <td>GridColumnSpacingDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>RowSpacing</td>
   <td>GridRowSpacingDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>StackLayout</td>

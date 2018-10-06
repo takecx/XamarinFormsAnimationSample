@@ -19,6 +19,9 @@
     <Folder Include="Triggers\BoxView\" />
     <Folder Include="Triggers\Button\" />
     <Folder Include="Triggers\DatePicker\" />
+    <Folder Include="Triggers\Layout\" />
+    <Folder Include="Triggers\AbsoluteLayout\" />
+    <Folder Include="Triggers\Grid\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />
