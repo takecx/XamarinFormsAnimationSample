@@ -139,7 +139,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>Padding</td>
   <td>ButtonPaddingThicknessAnimation</td>
   <td align=center>Thickness</td>
-  <td align=center>X</td>
+  <td align=center>?</td>
 </tr>
 <tr>
   <td>TextColor</td>
@@ -165,7 +165,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>Padding</td>
   <td>LayoutPaddingThicknessAnimation</td>
   <td align=center>Thickness</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>AbsoluteLayout</td>

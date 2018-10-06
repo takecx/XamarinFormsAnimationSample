@@ -22,7 +22,7 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
-		<Grid ColumnSpacing="5" RowSpacing="5">
+		<Grid ColumnSpacing="5" RowSpacing="5" Padding="0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="1*"/>
 				<ColumnDefinition Width="1*"/>
@@ -34,10 +34,12 @@
 			<Grid.Triggers>
 				<DataTrigger TargetType="Grid" Binding="{Binding Path=m_GoAnimation}" Value="True">
 					<DataTrigger.EnterActions>
+						<trigger:LayoutPaddingThicknessAnimation To="10"/>
 						<trigger:GridRowSpacingDoubleAnimation To="10"/>
 						<trigger:GridColumnSpacingDoubleAnimation To="10"/>
 					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
+						<trigger:LayoutPaddingThicknessAnimation To="0"/>
 						<trigger:GridRowSpacingDoubleAnimation To="5"/>
 						<trigger:GridColumnSpacingDoubleAnimation To="5"/>
 					</DataTrigger.ExitActions>

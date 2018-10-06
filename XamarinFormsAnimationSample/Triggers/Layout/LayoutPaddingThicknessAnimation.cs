@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class LayoutPaddingThicknessAnimation : AnimationBase<Thickness>
 	{
 		/// <summary>
-		/// Invoke the Margin Animation.
+		/// Invoke the Layout Padding Animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
