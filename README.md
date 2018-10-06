@@ -19,60 +19,325 @@ Fromを指定しない場合は現在のプロパティ値を自動で設定し�
 LengthとEasingは必要に応じて変更してください。
 
 # Animation List
-| Property Owner |  Property  |  Animation Class Name | T | Implemented|
-| ---- | ---- | ---- | :----: | :----: |
-| VisualElement |  BackgroundColor  |  BackgroundColorAnimation  |  Color  | O |
-| VisualElement |  Opacity  |  OpacityDoubleAnimation  | double |O|
-| VisualElement | HeightRequest | HeightRequestDoubleAnimation | double |O|
-| VisualElement | WidthRequest | WidthRequestDoubleAnimation | double |O|
-| VisualElement| Rotation | (RotationTo) | double | - |
-| VisualElement| Scale | (ScaleTo) | double | - |
-| View | Margin | MarginThicknessAnimation | Thickness | △ |
-| Label | FontSize | LabelFontSizeDoubleAnimation | double | O |
-| Label| TextColor | LabelTextColorAnimation | Color | O |
-| Label| LineHeight | LabelLineHeightDoubleAnimation | double | ? |
-| ActivityIndicator | Color | ActivityIndicatorColorAnimation | Color| △ |
-| BoxView | Color | BoxViewColorAnimation | Color | O |
-| BoxView | CornerRadius | BoxViewCornerRadiusAnimation | CornerRadius | ? |
-| Button | BorderColor | ButtonBorderColorAnimation | Color | O |
-| Button | BorderWidth | ButtonBorderWidthDoubleAnimation | double | O |
-| Button | CornerRadius | ButtonCornerRadiusAnimation | CornerRadius | X |
-| Button | FontSize | ButtonFontSizeDoubleAnimation | double | O |
-| Button | Padding | ButtonPaddingThicknessAnimation | Thickness | X |
-| Button | TextColor |ButtonTextColorAnimation | Color | O |
-| DatePicker | FontSize | DatePickerFontSizeDoubleAnimation | double | X |
-| DatePicker | TextColor | DatePickerTextColorAnimation | Color | X |
-| Layout | Padding | LayoutPaddingThicknessAnimation | Thickness | X |
-| AbsoluteLayout | LayoutBounds | AbsoluteLayoutBoundsRectangleAnimation | Rectangle | X |
-| Grid | ColumnSpacing | GridColumnSpacingDoubleAnimation | double | X |
-| Grid | RowSpacing | GridRowSpacingDoubleAnimation | double | X |
-| StackLayout | Spacing | StackLayoutSpacingDoubleAnimation | double | X |
-| Picker | TextColor | PickerTextColorAnimation | Color | X |
-| Picker | FontSize | PickerFontSizeDoubleAnimation | double | X |
-| ProgressBar | ProgressColor | ProgressBarColorAnimation | Color | X |
-| SearchBar | CancelButtonColor | SearchBarCancelButtonColorAnimation | Color | X |
-| SearchBar | FontSize | SearchBarFontSizeDoubleAnimation | double | X |
-| SearchBar | PlaceholderColor |SearchBarPlaceholderColorAnimation | Color | X |
-| SearchBar | TextColor |SearchBarTextColorAnimation | Color | X |
-| Slider | MaximumTrackColor | SliderMaximumTrackColorAnimation | Color | X |
-| Slider | MinumumTrackColor | SliderMinumumTrackColorAnimation | Color | X |
-| Slider | ThumbColor | SliderThumbColorAnimation | Color | X |
-| Switch | OnColor | SwitchOnColorAnimation | Color | X |
-| TableView | RowHeight | TableViewRowHeightDoubleAnimation | double| X |
-| TimePicker | FontSize | TimePickerFontSizeDoubleAnimation | double| X |
-| TimePicker | TextColor | TimePickerTextColorAnimation | Color | X |
-| Editor | FontSize | EditorFontSizeAnimation | Color | X |
-| Editor | PlaceholderColor | EditorPlaceholderColorAnimation | Color | X |
-| Editor | TextColor | EditorTextColorAnimation | Color | X |
-| Entry | FontSize | EntryFontSizeAnimation | Color | X |
-| Entry | PlaceholderColor | EntryPlaceholderColorAnimation | Color | X |
-| Entry | TextColor | EntryTextColorAnimation | Color | X |
-| ListView | RowHeight | ListViewRowHeightDoubleAnimation | double | X |
-| ListView | SeparatorColor | ListViewSeparatorColorAnimation | Color | X |
-| ScrollView | ContentSize | ScrollViewContentSizeAnimation | Size | X |
-| Frame | BorderColor | FrameBorderColorAnimation | Color | X |
-| Frame | CornerRadius | FrameCornerRadiusAnimation | CornerRadius | X |
-| Frame | OutlineColor |FrameOutlineColorAnimation | Color | X |
+<table>
+<tr>
+  <th>Property Owner</th>
+  <th>Property</th>
+  <th>Animation Class Name</th>
+  <th>T</th>
+  <th>Implemented</th>
+</tr>
+<tr>
+  <td rowspan=6>VisualElement</td>
+  <td>BackgroundColor</td>
+  <td>BackgroundColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>Opacity</td>
+  <td>OpacityDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>HeightRequest</td>
+  <td>HeightRequestDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>WidthRequest</td>
+  <td>WidthRequestDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>Rotation</td>
+  <td>(RotationTo)</td>
+  <td align=center>double</td>
+  <td align=center>-</td>
+</tr>
+<tr>
+  <td>Scale</td>
+  <td>(ScaleTo)</td>
+  <td align=center>double</td>
+  <td align=center>-</td>
+</tr>
+<tr>
+  <td>View</td>
+  <td>Margin</td>
+  <td>MarginThicknessAnimation</td>
+  <td align=center>Thickness</td>
+  <td align=center>△</td>
+</tr>
+<tr>
+  <td rowspan=3>Label</td>
+  <td>FontSize</td>
+  <td>LabelFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>TextColor</td>
+  <td>LabelTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>LineHeight</td>
+  <td>LabelLineHeightDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>?</td>
+</tr>
+<tr>
+  <td>ActivityIndicator</td>
+  <td>Color</td>
+  <td>ActivityIndicatorColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>△</td>
+</tr>
+<tr>
+  <td rowspan=2>BoxView</td>
+  <td>Color</td>
+  <td>BoxViewColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>CornerRadius</td>
+  <td>BoxViewCornerRadiusAnimation</td>
+  <td align=center>CornerRadius</td>
+  <td align=center>?</td>
+</tr>
+<tr>
+  <td rowspan=6>Button</td>
+  <td>BorderColor</td>
+  <td>ButtonBorderColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>BorderWidth</td>
+  <td>ButtonBorderWidthDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>CornerRadius</td>
+  <td>ButtonCornerRadiusAnimation</td>
+  <td align=center>CornerRadius</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>FontSize</td>
+  <td>ButtonFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>Padding</td>
+  <td>ButtonPaddingThicknessAnimation</td>
+  <td align=center>Thickness</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>TextColor</td>
+  <td>ButtonTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td rowspan=2>DatePicker</td>
+  <td>FontSize</td>
+  <td>DatePickerFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>TextColor</td>
+  <td>DatePickerTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>O</td>
+</tr>
+<tr>
+  <td>Layout</td>
+  <td>Padding</td>
+  <td>LayoutPaddingThicknessAnimation</td>
+  <td align=center>Thickness</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>AbsoluteLayout</td>
+  <td>LayoutBounds</td>
+  <td>AbsoluteLayoutBoundsRectangleAnimation</td>
+  <td align=center>Rectangle</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=2>Grid</td>
+  <td>ColumnSpacing</td>
+  <td>GridColumnSpacingDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>RowSpacing</td>
+  <td>GridRowSpacingDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>StackLayout</td>
+  <td>Spacing</td>
+  <td>StackLayoutSpacingDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=2>Picker</td>
+  <td>TextColor</td>
+  <td>PickerTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>FontSize</td>
+  <td>PickerFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>ProgressBar</td>
+  <td>ProgressColor</td>
+  <td>ProgressBarColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=3>Slider</td>
+  <td>MaximumTrackColor</td>
+  <td>SliderMaximumTrackColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>MinimumTrackColor</td>
+  <td>SliderMinimumTrackColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>ThumbColor</td>
+  <td>SliderThumbColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>Switch</td>
+  <td>OnColor</td>
+  <td>SwitchOnColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>TableView</td>
+  <td>RowHeight</td>
+  <td>TableViewRowHeightDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=2>TimePicker</td>
+  <td>FontSize</td>
+  <td>TimePickerFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>TextColor</td>
+  <td>TimePickerTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=3>Editor</td>
+  <td>FontSize</td>
+  <td>EditorFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>PlaceholderColor</td>
+  <td>EditorPlaceholderColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>TextColor</td>
+  <td>EditorTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=3>Entry</td>
+  <td>FontSize</td>
+  <td>EntryFontSizeDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>PlaceholderColor</td>
+  <td>EntryPlaceholderColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>TextColor</td>
+  <td>EntryTextColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=2>ListView</td>
+  <td>RowHeight</td>
+  <td>ListViewRowHeightDoubleAnimation</td>
+  <td align=center>double</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>SeparatorColor</td>
+  <td>ListViewSeparatorColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>ScrollView</td>
+  <td>ContentSize</td>
+  <td>ScrollViewContentSizeAnimation</td>
+  <td align=center>Size</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td rowspan=3>Frame</td>
+  <td>BorderColor</td>
+  <td>FrameBorderColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>CornerRadius</td>
+  <td>FrameCornerRadiusAnimation</td>
+  <td align=center>CornerRadius</td>
+  <td align=center>X</td>
+</tr>
+<tr>
+  <td>OutlineColor</td>
+  <td>FrameOutlineColorAnimation</td>
+  <td align=center>Color</td>
+  <td align=center>X</td>
+</tr>
+</table>
 
 # Xamarin.Forms namespace Class Diagram
 <https://drive.google.com/file/d/1cYChmthboGXX__Rg5pFC1O2pTNE7vWGy/view?usp=sharing>

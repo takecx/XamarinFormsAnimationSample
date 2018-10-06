@@ -22,6 +22,16 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<DatePicker FontSize="20" TextColor="Black">
+			<DatePicker.Triggers>
+				<DataTrigger TargetType="DatePicker" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:DatePickerTextColorAnimation To="Blue"/>
+						<trigger:DatePickerFontSizeDoubleAnimation To="30"/>
+					</DataTrigger.EnterActions>
+				</DataTrigger>
+			</DatePicker.Triggers>
+		</DatePicker>
 		<BoxView Color="Black">
 			<BoxView.Triggers>
 				<DataTrigger TargetType="BoxView" Binding="{Binding Path=m_GoAnimation}" Value="True">
