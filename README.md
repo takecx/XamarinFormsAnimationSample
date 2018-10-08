@@ -192,7 +192,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>Spacing</td>
   <td>StackLayoutSpacingDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=2>Picker</td>

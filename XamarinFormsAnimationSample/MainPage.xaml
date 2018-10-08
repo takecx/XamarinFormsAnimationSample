@@ -3,7 +3,17 @@
 	<ContentPage.BindingContext>
 		<local:MainPageViewModel/>
 	</ContentPage.BindingContext>
-	<StackLayout BackgroundColor="Silver">
+	<StackLayout BackgroundColor="Silver" Spacing="0">
+		<StackLayout.Triggers>
+			<DataTrigger TargetType="StackLayout" Binding="{Binding Path=m_GoAnimation}" Value="True">
+				<DataTrigger.EnterActions>
+					<trigger:StackLayoutSpacingDoubleAnimation To="10"/>
+				</DataTrigger.EnterActions>
+				<DataTrigger.ExitActions>
+					<trigger:StackLayoutSpacingDoubleAnimation To="0"/>
+				</DataTrigger.ExitActions>
+			</DataTrigger>
+		</StackLayout.Triggers>
 		<Button Text="Go!" Command="{Binding GoAnimationCommand}" BorderColor="Black" BorderWidth="2" FontSize="20" TextColor="Black" Margin="5">
 			<Button.Triggers>
 				<DataTrigger TargetType="Button" Binding="{Binding Path=m_GoAnimation}" Value="True">

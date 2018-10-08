@@ -22,6 +22,8 @@
     <Folder Include="Triggers\Layout\" />
     <Folder Include="Triggers\AbsoluteLayout\" />
     <Folder Include="Triggers\Grid\" />
+    <Folder Include="Triggers\StackLayout\" />
+    <Folder Include="Triggers\Picker\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />
