@@ -199,13 +199,13 @@ LengthとEasingは必要に応じて変更してください。
   <td>TextColor</td>
   <td>PickerTextColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>FontSize</td>
   <td>PickerFontSizeDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>ProgressBar</td>

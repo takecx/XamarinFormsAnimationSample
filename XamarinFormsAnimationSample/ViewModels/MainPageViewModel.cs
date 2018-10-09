@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 using Prism.Commands;
@@ -32,6 +33,12 @@ namespace XamarinFormsAnimationSample
 		{
 			get { return _GoAnimation; }
 			set { this.SetProperty(ref this._GoAnimation, value); }
+		}
+		private ObservableCollection<string> _PickerItems = new ObservableCollection<string> { "item1", "item2", "item3" };
+		public ObservableCollection<string> m_PickerItems
+		{
+			get { return _PickerItems; }
+			set { this.SetProperty(ref this._PickerItems, value); }
 		}
 
 		#endregion

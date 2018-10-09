@@ -32,6 +32,20 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<Picker TextColor="Black" FontSize="10" Title="Picker" ItemsSource="{Binding m_PickerItems,Mode=OneWay,UpdateSourceEventName=PropertyChanged}">
+			<Picker.Triggers>
+				<DataTrigger TargetType="Picker" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:PickerTextColorAnimation To="Lime"/>
+						<trigger:PickerFontSizeDoubleAnimation To="30"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:PickerTextColorAnimation To="Black"/>
+						<trigger:PickerFontSizeDoubleAnimation To="10"/>						
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</Picker.Triggers>
+		</Picker>
 		<Grid ColumnSpacing="5" RowSpacing="5" Padding="0">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="1*"/>
