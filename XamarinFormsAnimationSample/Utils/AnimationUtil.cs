@@ -34,5 +34,10 @@ namespace XamarinFormsAnimationSample.Utils
 								 from.Right + (to.Right - from.Right) * animationRatio,
 								 from.Bottom + (to.Bottom - from.Bottom) * animationRatio);
 		}
+
+		public static int CalcCurrentValue(int from, int to, double animationRatio)
+		{
+			return (int)(from + (to - from) * animationRatio);
+		}
 	}
 }

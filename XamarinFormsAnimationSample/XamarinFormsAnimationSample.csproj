@@ -25,6 +25,8 @@
     <Folder Include="Triggers\StackLayout\" />
     <Folder Include="Triggers\Picker\" />
     <Folder Include="Triggers\ProgressBar\" />
+    <Folder Include="Triggers\Switch\" />
+    <Folder Include="Triggers\TableView\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />

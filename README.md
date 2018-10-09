@@ -219,33 +219,33 @@ LengthとEasingは必要に応じて変更してください。
   <td>MaximumTrackColor</td>
   <td>SliderMaximumTrackColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>△</td>
 </tr>
 <tr>
   <td>MinimumTrackColor</td>
   <td>SliderMinimumTrackColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>△</td>
 </tr>
 <tr>
   <td>ThumbColor</td>
   <td>SliderThumbColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>△</td>
 </tr>
 <tr>
   <td>Switch</td>
   <td>OnColor</td>
   <td>SwitchOnColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>△</td>
 </tr>
 <tr>
   <td>TableView</td>
   <td>RowHeight</td>
-  <td>TableViewRowHeightDoubleAnimation</td>
-  <td align=center>double</td>
-  <td align=center>X</td>
+  <td>TableViewRowHeightIntAnimation</td>
+  <td align=center>int</td>
+  <td align=center><b>X</b></td>
 </tr>
 <tr>
   <td rowspan=2>TimePicker</td>

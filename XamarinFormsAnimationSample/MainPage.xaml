@@ -32,6 +32,26 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<TableView RowHeight="20" HasUnevenRows="false">
+			<TableView.Triggers>
+				<DataTrigger TargetType="TableView" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:TableViewRowHeightIntAnimation To="40"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:TableViewRowHeightIntAnimation To="20"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</TableView.Triggers>
+			<TableView.Root>
+				<TableRoot>
+					<TableSection Title="section1">
+						<EntryCell Text="aaa"/>
+						<SwitchCell Text="switch1"/>
+					</TableSection>
+				</TableRoot>
+			</TableView.Root>
+		</TableView>
 		<ProgressBar ProgressColor="Black" Progress="0.3" HeightRequest="5">
 			<ProgressBar.Triggers>
 				<DataTrigger TargetType="ProgressBar" Binding="{Binding Path=m_GoAnimation}" Value="True">
