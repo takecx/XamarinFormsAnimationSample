@@ -32,6 +32,20 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<Editor FontSize="20" TextColor="Black" Text="test">
+			<Editor.Triggers>
+				<DataTrigger TargetType="Editor" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:EditorTextColorAnimation To="Blue"/>
+						<trigger:EditorFontSizeDoubleAnimation To="40"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:EditorTextColorAnimation To="Black"/>
+						<trigger:EditorFontSizeDoubleAnimation To="20"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</Editor.Triggers>
+		</Editor>
 		<TimePicker FontSize="20" TextColor="Black">
 			<TimePicker.Triggers>
 				<DataTrigger TargetType="TimePicker" Binding="{Binding Path=m_GoAnimation}" Value="True">

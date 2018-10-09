@@ -265,19 +265,19 @@ LengthとEasingは必要に応じて変更してください。
   <td>FontSize</td>
   <td>EditorFontSizeDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>PlaceholderColor</td>
   <td>EditorPlaceholderColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>△</td>
 </tr>
 <tr>
   <td>TextColor</td>
   <td>EditorTextColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=3>Entry</td>
