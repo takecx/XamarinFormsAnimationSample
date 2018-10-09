@@ -32,6 +32,18 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<ProgressBar ProgressColor="Black" Progress="0.3" HeightRequest="5">
+			<ProgressBar.Triggers>
+				<DataTrigger TargetType="ProgressBar" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:ProgressBarColorAnimation To="Red"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:ProgressBarColorAnimation To="Black"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</ProgressBar.Triggers>
+		</ProgressBar>
 		<Picker TextColor="Black" FontSize="10" Title="Picker" ItemsSource="{Binding m_PickerItems,Mode=OneWay,UpdateSourceEventName=PropertyChanged}">
 			<Picker.Triggers>
 				<DataTrigger TargetType="Picker" Binding="{Binding Path=m_GoAnimation}" Value="True">

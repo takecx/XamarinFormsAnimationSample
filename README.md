@@ -212,7 +212,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>ProgressColor</td>
   <td>ProgressBarColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=3>Slider</td>
