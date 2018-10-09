@@ -32,6 +32,20 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<TimePicker FontSize="20" TextColor="Black">
+			<TimePicker.Triggers>
+				<DataTrigger TargetType="TimePicker" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:TimePickerTextColorAnimation To="Blue"/>
+						<trigger:TimePickerFontSizeDoubleAnimation To="40"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:TimePickerTextColorAnimation To="Black"/>
+						<trigger:TimePickerFontSizeDoubleAnimation To="20"/>						
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</TimePicker.Triggers>
+		</TimePicker>
 		<TableView RowHeight="20" HasUnevenRows="false">
 			<TableView.Triggers>
 				<DataTrigger TargetType="TableView" Binding="{Binding Path=m_GoAnimation}" Value="True">

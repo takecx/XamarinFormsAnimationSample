@@ -27,6 +27,7 @@
     <Folder Include="Triggers\ProgressBar\" />
     <Folder Include="Triggers\Switch\" />
     <Folder Include="Triggers\TableView\" />
+    <Folder Include="Triggers\TimePicker\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />

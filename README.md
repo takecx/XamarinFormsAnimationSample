@@ -252,13 +252,13 @@ LengthとEasingは必要に応じて変更してください。
   <td>FontSize</td>
   <td>TimePickerFontSizeDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>TextColor</td>
   <td>TimePickerTextColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=3>Editor</td>
