@@ -199,7 +199,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>TextColor</td>
   <td>PickerTextColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>O</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>FontSize</td>
