@@ -316,19 +316,19 @@ LengthとEasingは必要に応じて変更してください。
   <td>BorderColor</td>
   <td>FrameBorderColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>CornerRadius</td>
   <td>FrameCornerRadiusAnimation</td>
   <td align=center>CornerRadius</td>
-  <td align=center>X</td>
+  <td align=center>?</td>
 </tr>
 <tr>
-  <td>OutlineColor</td>
+  <td>OutlineColor(Obsolete)</td>
   <td>FrameOutlineColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>0</td>
 </tr>
 </table>
 

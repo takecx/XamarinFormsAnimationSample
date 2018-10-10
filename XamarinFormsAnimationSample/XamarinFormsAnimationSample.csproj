@@ -31,6 +31,7 @@
     <Folder Include="Triggers\Editor\" />
     <Folder Include="Triggers\Entry\" />
     <Folder Include="Triggers\ListView\" />
+    <Folder Include="Triggers\Frame\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />
