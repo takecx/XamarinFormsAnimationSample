@@ -312,13 +312,6 @@ LengthとEasingは必要に応じて変更してください。
   <td align=center>O</td>
 </tr>
 <tr>
-  <td>ScrollView</td>
-  <td>ContentSize</td>
-  <td>ScrollViewContentSizeAnimation</td>
-  <td align=center>Size</td>
-  <td align=center>X</td>
-</tr>
-<tr>
   <td rowspan=3>Frame</td>
   <td>BorderColor</td>
   <td>FrameBorderColorAnimation</td>
