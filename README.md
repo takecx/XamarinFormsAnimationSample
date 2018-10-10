@@ -284,19 +284,19 @@ LengthとEasingは必要に応じて変更してください。
   <td>FontSize</td>
   <td>EntryFontSizeDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>PlaceholderColor</td>
   <td>EntryPlaceholderColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>TextColor</td>
   <td>EntryTextColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=2>ListView</td>

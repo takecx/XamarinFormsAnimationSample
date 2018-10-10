@@ -29,6 +29,7 @@
     <Folder Include="Triggers\TableView\" />
     <Folder Include="Triggers\TimePicker\" />
     <Folder Include="Triggers\Editor\" />
+    <Folder Include="Triggers\Entry\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\ITriggerAction.cs" />

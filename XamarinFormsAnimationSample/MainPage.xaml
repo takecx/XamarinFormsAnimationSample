@@ -32,6 +32,22 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<Entry FontSize="20" TextColor="Black" PlaceholderColor="Blue" Placeholder="placeholder">
+			<Entry.Triggers>
+				<DataTrigger TargetType="Entry" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:EntryTextColorAnimation To="Fuchsia"/>
+						<trigger:EntryFontSizeDoubleAnimation To="40"/>
+						<trigger:EntryPlaceholderColorAnimation To="Green"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:EntryTextColorAnimation To="Black"/>
+						<trigger:EntryFontSizeDoubleAnimation To="20"/>
+						<trigger:EntryPlaceholderColorAnimation To="Blue"/>						
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</Entry.Triggers>
+		</Entry>
 		<Editor FontSize="20" TextColor="Black" Text="test">
 			<Editor.Triggers>
 				<DataTrigger TargetType="Editor" Binding="{Binding Path=m_GoAnimation}" Value="True">
