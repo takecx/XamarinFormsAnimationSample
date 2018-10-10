@@ -328,7 +328,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>OutlineColor(Obsolete)</td>
   <td>FrameOutlineColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>0</td>
+  <td align=center>O</td>
 </tr>
 </table>
 
