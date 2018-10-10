@@ -7,14 +7,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class ProgressBarColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change ProgressBar Color animation.
+		/// Invoke ProgressBar ProgressColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			SetDefaultValueIfNeeded((sender as ProgressBar).ProgressColor);
 
-			sender.Animate("ProgressBarColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(ProgressBarColorAnimation), new Animation((d) =>
 			{
 				(sender as ProgressBar).ProgressColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

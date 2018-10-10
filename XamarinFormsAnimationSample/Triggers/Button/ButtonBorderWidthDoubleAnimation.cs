@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class ButtonBorderWidthDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change button borderwidth animation.
+		/// Invoke Button BorderWidth animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as Button).BorderWidth = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("ButtonBorderWidthDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(ButtonBorderWidthDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

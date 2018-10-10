@@ -14,7 +14,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			SetDefaultValueIfNeeded((sender as ListView).SeparatorColor);
 
-			sender.Animate("ListViewSeparatorColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(ListViewSeparatorColorAnimation), new Animation((d) =>
 			{
 				(sender as ListView).SeparatorColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

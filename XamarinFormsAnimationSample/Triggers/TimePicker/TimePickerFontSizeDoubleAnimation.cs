@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class TimePickerFontSizeDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change TimePicker FontSize animation.
+		/// Invoke TimePicker FontSize animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as TimePicker).FontSize = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("TimePickerFontSizeDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(TimePickerFontSizeDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

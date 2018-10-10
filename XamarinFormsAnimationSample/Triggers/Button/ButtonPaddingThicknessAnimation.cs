@@ -7,14 +7,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class ButtonPaddingThicknessAnimation : AnimationBase<Thickness>
 	{
 		/// <summary>
-		/// Invoke the ButtonPadding Animation.
+		/// Invoke Button Padding Animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			//SetDefaultValueIfNeeded((sender as Button).Padding);
 
-			//sender.Animate("ButtonPaddingThicknessAnimation", new Animation((d) =>
+			//sender.Animate(nameof(ButtonPaddingThicknessAnimation), new Animation((d) =>
 			//{
 			//	(sender as Button).Padding = AnimationUtil.CalcCurrentValue(From, To, d);
 			//}),

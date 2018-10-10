@@ -7,14 +7,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class ButtonBorderColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change Button BorderColor animation.
+		/// Invoke Button BorderColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			SetDefaultValueIfNeeded((sender as Button).BorderColor);
 
-			sender.Animate("ButtonBorderColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(ButtonBorderColorAnimation), new Animation((d) =>
 			{
 				(sender as Button).BorderColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

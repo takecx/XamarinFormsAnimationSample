@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class PickerFontSizeDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change Picker FontSize animation.
+		/// Invoke Picker FontSize animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as Picker).FontSize = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("PickerFontSizeDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(PickerFontSizeDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

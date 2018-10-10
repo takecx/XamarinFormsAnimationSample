@@ -7,14 +7,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class SwitchOnColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change Switch OnColor animation.
+		/// Invoke Switch OnColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		//protected override void Invoke(VisualElement sender)
 		//{
 		//	SetDefaultValueIfNeeded((sender as Switch).OnColor);
 
-		//	sender.Animate("SwitchOnColorAnimation", new Animation((d) =>
+		//	sender.Animate(nameof(SwitchOnColorAnimation), new Animation((d) =>
 		//	{
 		//		(sender as Switch).OnColor = AnimationUtil.CalcCurrentValue(From, To, d);
 		//	}),

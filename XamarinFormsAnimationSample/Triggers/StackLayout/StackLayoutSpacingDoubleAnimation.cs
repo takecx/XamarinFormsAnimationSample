@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class StackLayoutSpacingDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change StackLayout Spacing animation.
+		/// Invoke StackLayout Spacing animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as StackLayout).Spacing = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("StackLayoutSpacingDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(StackLayoutSpacingDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

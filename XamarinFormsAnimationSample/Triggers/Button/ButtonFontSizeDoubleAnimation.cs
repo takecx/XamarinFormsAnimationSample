@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class ButtonFontSizeDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change button font-size animation.
+		/// Invoke Button FontSize animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as Button).FontSize = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("ButtonFontSizeDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(ButtonFontSizeDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

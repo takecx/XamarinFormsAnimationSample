@@ -8,14 +8,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class LabelTextColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change Label TextColor animation.
+		/// Invoke Label TextColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			SetDefaultValueIfNeeded((sender as Label).TextColor);
 
-			sender.Animate("LabelTextColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(LabelTextColorAnimation), new Animation((d) =>
 			{
 				(sender as Label).TextColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

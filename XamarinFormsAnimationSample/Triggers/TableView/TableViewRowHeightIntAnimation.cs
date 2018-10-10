@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class TableViewRowHeightIntAnimation : AnimationBase<int>
 	{
 		/// <summary>
-		/// Invoke change TableView RowHeight animation.
+		/// Invoke TableView RowHeight animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as TableView).RowHeight = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("TableViewRowHeightIntAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(TableViewRowHeightIntAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

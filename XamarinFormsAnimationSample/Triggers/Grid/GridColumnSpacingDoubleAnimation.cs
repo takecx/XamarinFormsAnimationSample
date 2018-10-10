@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class GridColumnSpacingDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change Grid ColumnSpacing animation.
+		/// Invoke Grid ColumnSpacing animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as Grid).ColumnSpacing = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("GridColumnSpacingDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(GridColumnSpacingDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

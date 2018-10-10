@@ -14,7 +14,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			SetDefaultValueIfNeeded((sender as Entry).PlaceholderColor);
 
-			sender.Animate("EntryPlaceholderColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(EntryPlaceholderColorAnimation), new Animation((d) =>
 			{
 				(sender as Entry).PlaceholderColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

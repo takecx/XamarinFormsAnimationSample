@@ -14,7 +14,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			SetDefaultValueIfNeeded((sender as BoxView).Color);
 
-			sender.Animate("BoxViewColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(BoxViewColorAnimation), new Animation((d) =>
 			{
 				(sender as BoxView).Color = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

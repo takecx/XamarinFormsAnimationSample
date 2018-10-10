@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class DatePickerFontSizeDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change DatePicker font-size animation.
+		/// Invoke DatePicker FontSize animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as DatePicker).FontSize = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("DatePickerFontSizeDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(DatePickerFontSizeDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

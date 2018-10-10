@@ -14,7 +14,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			SetDefaultValueIfNeeded((sender as ActivityIndicator).Color);
 
-			sender.Animate("ActivityIndicatorColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(ActivityIndicatorColorAnimation), new Animation((d) =>
 			{
 				(sender as ActivityIndicator).Color = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

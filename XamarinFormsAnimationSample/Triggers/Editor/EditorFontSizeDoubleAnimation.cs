@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class EditorFontSizeDoubleAnimation : AnimationBase<double>
 	{
 		/// <summary>
-		/// Invoke change Editor FontSize animation.
+		/// Invoke Editor FontSize animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as Editor).FontSize = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("EditorFontSizeDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(EditorFontSizeDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

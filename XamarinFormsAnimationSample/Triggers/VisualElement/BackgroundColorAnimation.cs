@@ -10,14 +10,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class BackgroundColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change BackgroundColor animation.
+		/// Invoke VisualElement BackgroundColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			SetDefaultValueIfNeeded(sender.BackgroundColor);
 
-			sender.Animate("BackgroundColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(BackgroundColorAnimation), new Animation((d) =>
 			{
 				sender.BackgroundColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

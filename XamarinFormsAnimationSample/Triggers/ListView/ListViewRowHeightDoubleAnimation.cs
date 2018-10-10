@@ -18,7 +18,7 @@ namespace XamarinFormsAnimationSample.Triggers
 			{
 				(sender as ListView).RowHeight = AnimationUtil.CalcCurrentValue(From, To, d);
 			});
-			sender.Animate("ListViewRowHeightDoubleAnimation", animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			sender.Animate(nameof(ListViewRowHeightDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

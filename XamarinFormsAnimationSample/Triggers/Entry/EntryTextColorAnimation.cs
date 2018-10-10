@@ -14,7 +14,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			SetDefaultValueIfNeeded((sender as Entry).TextColor);
 
-			sender.Animate("EntryTextColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(EntryTextColorAnimation), new Animation((d) =>
 			{
 				(sender as Entry).TextColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

@@ -7,14 +7,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class MarginThicknessAnimation : AnimationBase<Thickness>
 	{
 		/// <summary>
-		/// Invoke the Margin Animation.
+		/// Invoke View Margin Animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			SetDefaultValueIfNeeded((sender as View).Margin);
 
-			sender.Animate("MarginThicknessAnimation", new Animation((d) =>
+			sender.Animate(nameof(MarginThicknessAnimation), new Animation((d) =>
 			{
 				(sender as View).Margin = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),

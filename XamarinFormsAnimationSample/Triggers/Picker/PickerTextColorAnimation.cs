@@ -7,14 +7,14 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class PickerTextColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change BackgroundColor animation.
+		/// Invoke Picker TextColor animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
 			SetDefaultValueIfNeeded((sender as Picker).TextColor);
 
-			sender.Animate("PickerTextColorAnimation", new Animation((d) =>
+			sender.Animate(nameof(PickerTextColorAnimation), new Animation((d) =>
 			{
 				(sender as Picker).TextColor = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),
