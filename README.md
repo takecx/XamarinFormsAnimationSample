@@ -303,13 +303,13 @@ LengthとEasingは必要に応じて変更してください。
   <td>RowHeight</td>
   <td>ListViewRowHeightDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>X</td>
+  <td align=center><b>X</b></td>
 </tr>
 <tr>
   <td>SeparatorColor</td>
   <td>ListViewSeparatorColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>ScrollView</td>

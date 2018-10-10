@@ -32,6 +32,20 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<ListView ItemsSource="{Binding m_PickerItems,Mode=OneWay,UpdateSourceEventName=PropertyChanged}" SeparatorColor="Black" RowHeight="10">
+			<ListView.Triggers>
+				<DataTrigger TargetType="ListView" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:ListViewSeparatorColorAnimation To="Red"/>
+						<trigger:ListViewRowHeightDoubleAnimation To="20"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:ListViewSeparatorColorAnimation To="Black"/>
+						<trigger:ListViewRowHeightDoubleAnimation To="10"/>						
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</ListView.Triggers>
+		</ListView>
 		<Entry FontSize="20" TextColor="Black" PlaceholderColor="Blue" Placeholder="placeholder">
 			<Entry.Triggers>
 				<DataTrigger TargetType="Entry" Binding="{Binding Path=m_GoAnimation}" Value="True">
