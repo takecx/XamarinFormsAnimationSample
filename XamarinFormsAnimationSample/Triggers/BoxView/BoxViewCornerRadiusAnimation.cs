@@ -14,7 +14,7 @@ namespace XamarinFormsAnimationSample.Triggers
 		{
 			SetDefaultValueIfNeeded((sender as BoxView).CornerRadius);
 
-			sender.Animate(nameof(BoxViewColorAnimation), new Animation((d) =>
+			sender.Animate(nameof(BoxViewCornerRadiusAnimation), new Animation((d) =>
 			{
 				(sender as BoxView).CornerRadius = AnimationUtil.CalcCurrentValue(From, To, d);
 			}),
