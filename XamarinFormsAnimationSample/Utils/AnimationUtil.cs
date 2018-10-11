@@ -39,5 +39,13 @@ namespace XamarinFormsAnimationSample.Utils
 		{
 			return (int)(from + (to - from) * animationRatio);
 		}
+
+		public static CornerRadius CalcCurrentValue(CornerRadius from, CornerRadius to, double animationRatio)
+		{
+			return new CornerRadius(from.TopLeft + (to.TopLeft - from.TopLeft) * animationRatio,
+								   from.TopRight + (to.TopRight - from.TopRight) * animationRatio,
+								   from.BottomLeft + (to.BottomLeft - from.BottomLeft) * animationRatio,
+									from.BottomRight + (to.BottomRight - from.BottomRight) * animationRatio);
+		}
 	}
 }

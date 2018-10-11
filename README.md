@@ -108,7 +108,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>CornerRadius</td>
   <td>BoxViewCornerRadiusAnimation</td>
   <td align=center>CornerRadius</td>
-  <td align=center>?</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td rowspan=6>Button</td>

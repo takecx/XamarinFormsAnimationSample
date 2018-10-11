@@ -7,7 +7,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	public class BoxViewColorAnimation : AnimationBase<Color>
 	{
 		/// <summary>
-		/// Invoke change BoxViewColor animation.
+		/// Invoke BoxView Color animation.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
