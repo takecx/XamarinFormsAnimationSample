@@ -2,7 +2,7 @@
 UI Animation Sample with Xamarin.Forms
 
 # Environments
-Xamarin.Forms : 3.0.0.482510
+Xamarin.Forms : 3.2.0.871581
 
 # Common Property
 ~~~C#
