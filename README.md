@@ -127,7 +127,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>CornerRadius</td>
   <td>ButtonCornerRadiusAnimation</td>
   <td align=center>CornerRadius</td>
-  <td align=center>X</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>FontSize</td>
