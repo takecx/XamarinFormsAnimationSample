@@ -36,6 +36,18 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<Switch OnColor="Black">
+			<Switch.Triggers>
+				<DataTrigger TargetType="Switch" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:SwitchOnColorAnimation To="Blue"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:SwitchOnColorAnimation To="Black"/>
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</Switch.Triggers>
+		</Switch>
 		<Slider MaximumTrackColor="Red" MinimumTrackColor="Blue" ThumbColor="Green">
 			<Slider.Triggers>
 				<DataTrigger TargetType="Slider" Binding="{Binding Path=m_GoAnimation}" Value="True">

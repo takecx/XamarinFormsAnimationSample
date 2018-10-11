@@ -225,7 +225,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>MinimumTrackColor</td>
   <td>SliderMinimumTrackColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>o</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>ThumbColor</td>
@@ -238,7 +238,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>OnColor</td>
   <td>SwitchOnColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>△</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>TableView</td>
