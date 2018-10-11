@@ -80,14 +80,16 @@
 				</DataTrigger>
 			</Label.Triggers>
 		</Label>
-		<Frame BorderColor="Lime">
+		<Frame BorderColor="Lime" CornerRadius="0">
 			<Frame.Triggers>
 				<DataTrigger TargetType="Frame" Binding="{Binding Path=m_GoAnimation}" Value="True">
 					<DataTrigger.EnterActions>
 						<trigger:FrameBorderColorAnimation To="Blue"/>
+						<trigger:FrameCornerRadiusAnimation To="20"/>
 					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
 						<trigger:FrameBorderColorAnimation To="Black"/>
+						<trigger:FrameCornerRadiusAnimation To="0"/>
 					</DataTrigger.ExitActions>
 				</DataTrigger>
 			</Frame.Triggers>

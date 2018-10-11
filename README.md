@@ -322,7 +322,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>CornerRadius</td>
   <td>FrameCornerRadiusAnimation</td>
   <td align=center>CornerRadius</td>
-  <td align=center>?</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>OutlineColor(Obsolete)</td>
