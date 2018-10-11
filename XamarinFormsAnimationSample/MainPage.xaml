@@ -36,6 +36,22 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<Slider MaximumTrackColor="Red" MinimumTrackColor="Blue" ThumbColor="Green">
+			<Slider.Triggers>
+				<DataTrigger TargetType="Slider" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:SliderMinimumTrackColorAnimation To="Red"/>
+						<trigger:SliderMaximumTrackColorAnimation To="Blue"/>
+						<trigger:SliderThumbColorAnimation To="Fuchsia"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:SliderMinimumTrackColorAnimation To="Blue"/>
+						<trigger:SliderMaximumTrackColorAnimation To="Red"/>
+						<trigger:SliderThumbColorAnimation To="Green"/>						
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</Slider.Triggers>
+		</Slider>
 		<Label Text="text" LineHeight="0.5" TextColor="Black" FontSize="20">
 			<Label.Triggers>
 				<DataTrigger TargetType="Label" Binding="{Binding Path=m_GoAnimation}" Value="True">

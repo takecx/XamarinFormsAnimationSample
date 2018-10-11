@@ -8,6 +8,7 @@ namespace XamarinFormsAnimationSample.Triggers
 	{
 		/// <summary>
 		/// Invoke AbsoluteLayout LayoutBounds Animation.
+		/// AbsoluteLayout.LayoutBounds is Attached Property.
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)

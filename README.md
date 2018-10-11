@@ -219,19 +219,19 @@ LengthとEasingは必要に応じて変更してください。
   <td>MaximumTrackColor</td>
   <td>SliderMaximumTrackColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>△</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>MinimumTrackColor</td>
   <td>SliderMinimumTrackColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>△</td>
+  <td align=center>o</td>
 </tr>
 <tr>
   <td>ThumbColor</td>
   <td>SliderThumbColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>△</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>Switch</td>
