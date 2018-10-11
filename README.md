@@ -88,7 +88,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>LineHeight</td>
   <td>LabelLineHeightDoubleAnimation</td>
   <td align=center>double</td>
-  <td align=center>?</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>ActivityIndicator</td>

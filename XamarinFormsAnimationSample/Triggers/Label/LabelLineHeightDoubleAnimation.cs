@@ -12,14 +12,13 @@ namespace XamarinFormsAnimationSample.Triggers
 		/// <param name="sender">Sender.</param>
 		protected override void Invoke(VisualElement sender)
 		{
-			// LabelにLineHeightプロパティが無い？？？
-			//SetDefaultValueIfNeeded((sender as Label).LineHeight);
+			SetDefaultValueIfNeeded((sender as Label).LineHeight);
 
-			//var animation = new Animation((d) =>
-			//{
-			//	(sender as Label).LineHeight = AnimationUtil.CalcCurrentValue(From, To, d);
-			//});
-			//sender.Animate(nameof(LabelLineHeightDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
+			var animation = new Animation((d) =>
+			{
+				(sender as Label).LineHeight = AnimationUtil.CalcCurrentValue(From, To, d);
+			});
+			sender.Animate(nameof(LabelLineHeightDoubleAnimation), animation, length: Length, easing: EasingValueConverter.Convert(Easing));
 		}
 	}
 }

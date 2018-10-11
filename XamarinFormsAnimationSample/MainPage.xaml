@@ -32,6 +32,22 @@
 				</DataTrigger>				
 			</Button.Triggers>
 		</Button>
+		<Label Text="text" LineHeight="0.5" TextColor="Black" FontSize="20">
+			<Label.Triggers>
+				<DataTrigger TargetType="Label" Binding="{Binding Path=m_GoAnimation}" Value="True">
+					<DataTrigger.EnterActions>
+						<trigger:LabelTextColorAnimation To="Blue"/>
+						<trigger:LabelFontSizeDoubleAnimation To="30"/>
+						<trigger:LabelLineHeightDoubleAnimation To="1"/>
+					</DataTrigger.EnterActions>
+					<DataTrigger.ExitActions>
+						<trigger:LabelTextColorAnimation To="Black"/>
+						<trigger:LabelFontSizeDoubleAnimation To="20"/>
+						<trigger:LabelLineHeightDoubleAnimation To="0.5"/>						
+					</DataTrigger.ExitActions>
+				</DataTrigger>
+			</Label.Triggers>
+		</Label>
 		<Frame BorderColor="Lime">
 			<Frame.Triggers>
 				<DataTrigger TargetType="Frame" Binding="{Binding Path=m_GoAnimation}" Value="True">
@@ -212,16 +228,16 @@
 			<Button Command="{Binding StartChangeActivityIndicatorColorAnimationCommand}" Text="Indicator Color"/>
 		</StackLayout>
 		<Entry Placeholder="Margin" Margin="10">
-			<Label.Triggers>
+			<Entry.Triggers>
 				<Trigger TargetType="Entry" Property="Entry.IsFocused" Value="True">
 					<Trigger.EnterActions>
-						<trigger:MarginThicknessAnimation To="20" Length="3000"/>
+						<trigger:MarginThicknessAnimation To="20"/>
 					</Trigger.EnterActions>
 					<Trigger.ExitActions>
-						<trigger:WidthRequestDoubleAnimation To="10" Length="3000"/>
+						<trigger:WidthRequestDoubleAnimation To="10"/>
 					</Trigger.ExitActions>
 				</Trigger>
-			</Label.Triggers>
+			</Entry.Triggers>
 		</Entry>
 		<Entry Placeholder="test" BackgroundColor="Olive">
 			<Entry.Triggers>
