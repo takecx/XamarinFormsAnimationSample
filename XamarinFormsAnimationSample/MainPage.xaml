@@ -14,7 +14,7 @@
 				</DataTrigger.ExitActions>
 			</DataTrigger>
 		</StackLayout.Triggers>
-		<Button Text="Go!" Command="{Binding GoAnimationCommand}" BorderColor="Black" BorderWidth="2" FontSize="20" TextColor="Black" Margin="5" CornerRadius="5">
+		<Button Text="Go!" Command="{Binding GoAnimationCommand}" BorderColor="Black" BorderWidth="2" FontSize="20" TextColor="Black" Margin="5" CornerRadius="5" Padding="0">
 			<Button.Triggers>
 				<DataTrigger TargetType="Button" Binding="{Binding Path=m_GoAnimation}" Value="True">
 					<DataTrigger.EnterActions>
@@ -23,6 +23,7 @@
 						<trigger:ButtonFontSizeDoubleAnimation To="30"/>
 						<trigger:ButtonTextColorAnimation To="Fuchsia"/>
 						<trigger:ButtonCornerRadiusAnimation To="20"/>
+						<trigger:ButtonPaddingThicknessAnimation To="20"/>
 					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
 						<trigger:ButtonBorderColorAnimation To="Black"/>
@@ -30,6 +31,7 @@
 						<trigger:ButtonFontSizeDoubleAnimation To="20"/>
 						<trigger:ButtonTextColorAnimation To="Black"/>
 						<trigger:ButtonCornerRadiusAnimation To="5"/>
+						<trigger:ButtonPaddingThicknessAnimation To="0"/>
 					</DataTrigger.ExitActions>
 				</DataTrigger>				
 			</Button.Triggers>
