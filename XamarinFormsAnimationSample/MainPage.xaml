@@ -122,16 +122,18 @@
 				</DataTrigger>
 			</Entry.Triggers>
 		</Entry>
-		<Editor FontSize="20" TextColor="Black" Text="test">
+		<Editor FontSize="20" TextColor="Black" Placeholder="placeholder" PlaceholderColor="Fuchsia">
 			<Editor.Triggers>
 				<DataTrigger TargetType="Editor" Binding="{Binding Path=m_GoAnimation}" Value="True">
 					<DataTrigger.EnterActions>
 						<trigger:EditorTextColorAnimation To="Blue"/>
 						<trigger:EditorFontSizeDoubleAnimation To="40"/>
+						<trigger:EditorPlaceholderColorAnimation To="Lime"/>
 					</DataTrigger.EnterActions>
 					<DataTrigger.ExitActions>
 						<trigger:EditorTextColorAnimation To="Black"/>
 						<trigger:EditorFontSizeDoubleAnimation To="20"/>
+						<trigger:EditorPlaceholderColorAnimation To="Fuchsia"/>
 					</DataTrigger.ExitActions>
 				</DataTrigger>
 			</Editor.Triggers>

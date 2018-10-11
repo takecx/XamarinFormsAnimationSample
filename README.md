@@ -271,7 +271,7 @@ LengthとEasingは必要に応じて変更してください。
   <td>PlaceholderColor</td>
   <td>EditorPlaceholderColorAnimation</td>
   <td align=center>Color</td>
-  <td align=center>△</td>
+  <td align=center>O</td>
 </tr>
 <tr>
   <td>TextColor</td>
